@@ -1,0 +1,171 @@
+R6
+configure terminal
+interface fastEthernet 0/0
+ip address 192.168.20.1 255.255.255.252
+no shutdown 
+exit
+router ospf 1227
+network 0.0.0.0 255.255.255.255 area 0
+exit 
+interface loopback 33
+ip address 6.6.6.6 255.255.255.255
+exit
+exit
+write
+
+
+
+R1
+configure terminal
+interface fastEthernet 0/0
+ip address 192.168.20.2 255.255.255.252
+no shutdown 
+exit
+interface fastEthernet 0/1
+ip address 192.168.20.5 255.255.255.252
+no shutdown 
+mpls ip
+exit 
+interface fastEthernet 1/0
+ip address 192.168.20.9 255.255.255.252
+no shutdown 
+mpls ip
+exit 
+router ospf 1227
+network 0.0.0.0 255.255.255.255 area 0
+exit
+interface loopback 33
+ip address 1.1.1.1 255.255.255.255
+exit
+exit
+write
+
+
+
+R2
+configure terminal
+interface fastEthernet 0/1
+ip address 192.168.20.6 255.255.255.252
+no shutdown 
+mpls ip
+exit
+interface fastEthernet 0/0
+ip address 192.168.20.13 255.255.255.252
+no shutdown 
+mpls ip
+exit
+router ospf 1227
+network 0.0.0.0 255.255.255.255 area 0
+exit
+interface loopback 33
+ip address 2.2.2.2 255.255.255.255
+exit
+exit 
+write
+
+
+
+
+R3
+configure terminal
+interface fastEthernet 0/0
+ip address 192.168.20.14 255.255.255.252
+no shutdown 
+mpls ip
+exit
+interface fastEthernet 0/0
+ip address 192.168.20.17 255.255.255.252
+no shutdown 
+mpls ip
+exit
+router ospf 1227
+network 0.0.0.0 255.255.255.255 area 0
+exit
+interface loopback 33
+ip address 3.3.3.3 255.255.255.255
+exit
+exit 
+write
+
+
+R4
+configure terminal
+interface fastEthernet 0/1
+ip address 192.168.20.18 255.255.255.252
+no shutdown 
+mpls ip
+exit
+interface fastEthernet 2/0
+no switchport
+ip address 192.168.20.22 255.255.255.252
+no shutdown 
+mpls ip
+exit
+interface fastEthernet 1/0
+ip address 192.168.20.25 255.255.255.252
+no shutdown 
+exit
+router ospf 1227
+network 0.0.0.0 255.255.255.255 area 0
+exit
+interface loopback 33
+ip address 4.4.4.4 255.255.255.255
+exit
+exit 
+write
+
+
+
+R5
+configure terminal
+interface fastEthernet 1/0
+ip address 192.168.20.10 255.255.255.252
+no shutdown 
+exit
+interface fastEthernet 2/0
+no switchport
+ip address 192.168.20.21 255.255.255.252
+no shutdown 
+exit
+router ospf 1227
+network 0.0.0.0 255.255.255.255 area 0
+exit
+interface loopback 33
+ip address 5.5.5.5 255.255.255.255
+exit
+exit 
+write
+
+
+R7
+
+configure terminal
+interface fastEthernet 1/0
+ip address 192.168.20.26 255.255.255.252
+no shutdown 
+exit
+router ospf 1227
+network 0.0.0.0 255.255.255.255 area 0
+exit
+interface loopback 33
+ip address 7.7.7.7 255.255.255.255
+exit
+exit 
+write
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
