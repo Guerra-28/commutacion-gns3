@@ -1,4 +1,4 @@
-R6
+#R6
 configure terminal
 interface fastEthernet 0/0
 ip address 192.168.20.1 255.255.255.252
@@ -15,7 +15,7 @@ write
 
 
 
-R1
+#R1
 configure terminal
 interface fastEthernet 0/0
 ip address 192.168.20.2 255.255.255.252
@@ -42,7 +42,7 @@ write
 
 
 
-R2
+#R2
 configure terminal
 interface fastEthernet 0/1
 ip address 192.168.20.6 255.255.255.252
@@ -66,7 +66,7 @@ write
 
 
 
-R3
+#R3
 configure terminal
 interface fastEthernet 0/0
 ip address 192.168.20.14 255.255.255.252
@@ -88,7 +88,7 @@ exit
 write
 
 
-R4
+#R4
 configure terminal
 interface fastEthernet 0/1
 ip address 192.168.20.18 255.255.255.252
@@ -116,7 +116,7 @@ write
 
 
 
-R5
+#R5
 configure terminal
 interface fastEthernet 1/0
 ip address 192.168.20.10 255.255.255.252
@@ -137,7 +137,7 @@ exit
 write
 
 
-R7
+#R7
 
 configure terminal
 interface fastEthernet 1/0
@@ -152,6 +152,45 @@ ip address 7.7.7.7 255.255.255.255
 exit
 exit 
 write
+
+
+
+
+
+#Pasos para ingenieria de trafico
+#1. Habilitar ingenieria de trafico
+#2. Reservar capacidad
+#3. Crear tunel
+# - Capacidad
+# - Establecer 
+
+
+
+
+
+# en cada router y en cada interface
+mpls traffic-eng tunnels #activar tuneles en cada router y luego en cada interface
+ip rsvp bandwidth 8000 # reservar las 6m en cada interface
+
+#En router de inicio del tunel
+interface tunnel 45 #en el router de inicio del tunel
+ip unnumbered loopback 33 ##indicar el identificador del loopbackque nunca va a estar caido
+tunnel destination 4.4.4.4 # hasta donde va el tunel
+tunnel mpls traffic-eng bandwidth 3000 #ancho de banda del tunel
+tunnel mpls traffic-eng autoroute announce # recalcular costo ospf
+tunnel mpls traffic-eng path-option 1  explicit name principal #opcion de rtas alternas y si es estatica o dinamica
+tunnel mpls traffic-eng path-option 2 dynamic #ruta alterna dinamica
+
+
+
+
+
+Interface tunnel 1
+Ip unnumbered loopback 33
+Tunnel mode mpls traffic-eng
+Tunnel destination 2.2.2.2
+Tunnel mpls traffic-eng bandwidth 5000
+Tunnel mpls traffic-eng autoroute announce
 
 
 

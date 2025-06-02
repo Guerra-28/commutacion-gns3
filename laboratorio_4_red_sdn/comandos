@@ -1,0 +1,97 @@
+Aplicaciones para onos
+openflow provider suite
+intent
+kafka
+host
+fwd
+
+
+
+host to hots ipterm
+{
+  "type": "HostToHostIntent",
+  "appId": "org.onosproject.ovsdb",
+  "priority": 100,
+  "one": "02:42:3C:16:15:00/-1",
+  "two": "02:42:8E:2D:33:00/-1"
+}
+
+
+
+
+
+PointToPointIntent:
+
+{
+  "type": "PointToPointIntent",
+  "appId": "org.onosproject.ovsdb",
+  "priority": 55,
+  "ingressPoint": {
+    "port": "4",
+    "device": "of:0000000000000002"
+  },
+  "egressPoint": {
+    "port": "2",
+    "device": "of:0000000000000004"
+  }
+}
+
+
+
+
+COMANDOS PARA CONFIGURAR LOS VSW
+
+SW1
+ovs-vsctl del-port br0 eth0
+ovs-vsctl set-controller br0 tcp:192.168.122.200:6653
+ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000001
+ovs-vsctl set bridge br0 other-config:hwaddr=00:00:00:00:00:01
+ovs-vsctl set bridge br0 protocol=OpenFlow10,OpenFlow13
+
+
+SW2
+ovs-vsctl del-port br0 eth0
+ovs-vsctl set-controller br0 tcp:192.168.122.200:6653
+ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000002
+ovs-vsctl set bridge br0 other-config:hwaddr=00:00:00:00:00:02
+ovs-vsctl set bridge br0 protocol=OpenFlow10,OpenFlow13
+
+
+SW3
+ovs-vsctl del-port br0 eth0
+ovs-vsctl set-controller br0 tcp:192.168.122.200:6633
+ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000003
+ovs-vsctl set bridge br0 other-config:hwaddr=00:00:00:00:00:03
+ovs-vsctl set bridge br0 protocol=OpenFlow10,OpenFlow13
+
+
+SW4
+ovs-vsctl del-port br0 eth0
+ovs-vsctl set-controller br0 tcp:192.168.122.200:6633
+ovs-vsctl set bridge br0 other-config:datapath-id=0000000000000004
+ovs-vsctl set bridge br0 other-config:hwaddr=00:00:00:00:00:04
+ovs-vsctl set bridge br0 protocol=OpenFlow10,OpenFlow13
+
+
+
+COMANDOS PARA VALIDAR CONFIGURACION Y FUNCIONAMIENTO
+
+Check:
+ovs-vsctl show
+ovs-vsctl list controller
+netstat -tunlp
+
+ovs-ofctl -O OpenFlow13 dump-ports br0  // muestra TX y RX puertos de trafico con otrs SW
+ovs-ofctl -O OpenFlow13 dump-flows br0  // flujos controlador
+
+
+
+
+simular trafico
+
+iperf3 -s
+
+iperf3 -c 192.168.0.3 -t 60
+
+
+

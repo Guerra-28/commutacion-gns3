@@ -1,0 +1,37 @@
+Apr 04 20:53:38.407 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 04 20:53:38.407 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 44595.
+Apr 04 20:53:38.415 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 04 20:53:38.415 HYPERVISOR: exec_cmd: hypervisor working_dir /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips 
+Apr 04 20:53:38.415 GENERAL: working_dir=/home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips
+Apr 04 20:53:38.415 HYPERVISOR: exec_cmd: hypervisor working_dir /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/de4a21d8-bf80-4945-9e95-48fab9cd22d1 
+Apr 04 20:53:38.415 GENERAL: working_dir=/home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/de4a21d8-bf80-4945-9e95-48fab9cd22d1
+Apr 04 20:53:38.415 HYPERVISOR: exec_cmd: vm create R8 8 c3725 
+Apr 04 20:53:38.415 VM: VM R8 created.
+Apr 04 20:53:38.415 HYPERVISOR: exec_cmd: vm set_con_tcp_port R8 5007 
+Apr 04 20:53:38.415 HYPERVISOR: exec_cmd: c3725 get_mac_addr R8 
+Apr 04 20:53:38.416 HYPERVISOR: exec_cmd: vm set_disk0 R8 0 
+Apr 04 20:53:38.416 HYPERVISOR: exec_cmd: vm get_status R8 
+Apr 04 20:53:38.416 HYPERVISOR: exec_cmd: vm set_idle_pc R8 0x60c09aa0 
+Apr 04 20:53:38.416 HYPERVISOR: exec_cmd: vm set_ios R8 /home/juan/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Apr 04 20:53:38.416 HYPERVISOR: exec_cmd: c3725 set_mac_addr R8 c208.1727.0000 
+Apr 04 20:53:38.417 HYPERVISOR: exec_cmd: vm set_nvram R8 256 
+Apr 04 20:53:38.417 HYPERVISOR: exec_cmd: vm get_status R8 
+Apr 04 20:53:38.417 HYPERVISOR: exec_cmd: vm slot_add_binding R8 1 0 NM-1FE-TX 
+Apr 04 20:53:38.417 HYPERVISOR: exec_cmd: vm get_status R8 
+Apr 04 20:53:38.417 HYPERVISOR: exec_cmd: vm slot_add_binding R8 2 0 NM-16ESW 
+Apr 04 20:53:40.795 HYPERVISOR: exec_cmd: nio create_udp udp-de75410c-0ac0-42db-9f4b-98b967fc5c22 10064 127.0.0.1 10065 
+Apr 04 20:53:41.003 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R8 0 0 udp-de75410c-0ac0-42db-9f4b-98b967fc5c22 
+Apr 04 20:53:41.003 HYPERVISOR: exec_cmd: vm get_status R8 
+Apr 04 20:53:41.363 HYPERVISOR: exec_cmd: nio create_udp udp-ac80f576-6572-4c85-ae25-c69303ff678c 10076 127.0.0.1 10077 
+Apr 04 20:53:41.364 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R8 0 1 udp-ac80f576-6572-4c85-ae25-c69303ff678c 
+Apr 04 20:53:41.364 HYPERVISOR: exec_cmd: vm get_status R8 
+Apr 04 20:53:41.444 HYPERVISOR: exec_cmd: nio create_udp udp-1891f957-6b55-4406-8acf-925e4e8169eb 10080 127.0.0.1 10081 
+Apr 04 20:53:41.445 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R8 1 0 udp-1891f957-6b55-4406-8acf-925e4e8169eb 
+Apr 04 20:53:41.445 HYPERVISOR: exec_cmd: vm get_status R8 
+Apr 04 20:54:03.943 HYPERVISOR: exec_cmd: vm set_ghost_status R8 2 
+Apr 04 20:54:03.943 HYPERVISOR: exec_cmd: vm set_ghost_file R8 /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+Apr 04 20:54:03.944 HYPERVISOR: exec_cmd: vm get_status R8 
+Apr 04 20:54:03.944 HYPERVISOR: exec_cmd: vm set_config R8 configs/i8_startup-config.cfg 
+Apr 04 20:54:03.944 HYPERVISOR: exec_cmd: vm start R8 
+Apr 04 20:54:34.194 HYPERVISOR: exec_cmd: vm extract_config R8 
+Apr 04 20:54:34.197 HYPERVISOR: exec_cmd: vm extract_config R8 

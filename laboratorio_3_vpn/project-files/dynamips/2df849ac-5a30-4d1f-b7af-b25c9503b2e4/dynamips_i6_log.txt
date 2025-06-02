@@ -1,0 +1,37 @@
+Apr 04 20:53:38.347 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 04 20:53:38.347 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 46751.
+Apr 04 20:53:38.354 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 04 20:53:38.355 HYPERVISOR: exec_cmd: hypervisor working_dir /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips 
+Apr 04 20:53:38.355 GENERAL: working_dir=/home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips
+Apr 04 20:53:38.355 HYPERVISOR: exec_cmd: hypervisor working_dir /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/2df849ac-5a30-4d1f-b7af-b25c9503b2e4 
+Apr 04 20:53:38.355 GENERAL: working_dir=/home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/2df849ac-5a30-4d1f-b7af-b25c9503b2e4
+Apr 04 20:53:38.355 HYPERVISOR: exec_cmd: vm create R6 6 c3725 
+Apr 04 20:53:38.355 VM: VM R6 created.
+Apr 04 20:53:38.355 HYPERVISOR: exec_cmd: vm set_con_tcp_port R6 5005 
+Apr 04 20:53:38.355 HYPERVISOR: exec_cmd: c3725 get_mac_addr R6 
+Apr 04 20:53:38.356 HYPERVISOR: exec_cmd: vm set_disk0 R6 0 
+Apr 04 20:53:38.356 HYPERVISOR: exec_cmd: vm get_status R6 
+Apr 04 20:53:38.356 HYPERVISOR: exec_cmd: vm set_idle_pc R6 0x60c09aa0 
+Apr 04 20:53:38.356 HYPERVISOR: exec_cmd: vm set_ios R6 /home/juan/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Apr 04 20:53:38.357 HYPERVISOR: exec_cmd: c3725 set_mac_addr R6 c206.16e2.0000 
+Apr 04 20:53:38.357 HYPERVISOR: exec_cmd: vm set_nvram R6 256 
+Apr 04 20:53:38.357 HYPERVISOR: exec_cmd: vm get_status R6 
+Apr 04 20:53:38.357 HYPERVISOR: exec_cmd: vm slot_add_binding R6 1 0 NM-1FE-TX 
+Apr 04 20:53:38.357 HYPERVISOR: exec_cmd: vm get_status R6 
+Apr 04 20:53:38.357 HYPERVISOR: exec_cmd: vm slot_add_binding R6 2 0 NM-16ESW 
+Apr 04 20:53:39.444 HYPERVISOR: exec_cmd: nio create_udp udp-eec2d228-b77a-4634-9aa7-611421b893e5 10022 127.0.0.1 10023 
+Apr 04 20:53:39.653 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 0 1 udp-eec2d228-b77a-4634-9aa7-611421b893e5 
+Apr 04 20:53:39.654 HYPERVISOR: exec_cmd: vm get_status R6 
+Apr 04 20:53:39.998 HYPERVISOR: exec_cmd: nio create_udp udp-645feaf1-1cff-4f80-8cd9-e7dfc8bd475b 10032 127.0.0.1 10033 
+Apr 04 20:53:39.999 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 0 0 udp-645feaf1-1cff-4f80-8cd9-e7dfc8bd475b 
+Apr 04 20:53:39.999 HYPERVISOR: exec_cmd: vm get_status R6 
+Apr 04 20:53:40.072 HYPERVISOR: exec_cmd: nio create_udp udp-411ecd51-a600-497e-8822-b6a016d57cee 10038 127.0.0.1 10039 
+Apr 04 20:53:40.073 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 1 0 udp-411ecd51-a600-497e-8822-b6a016d57cee 
+Apr 04 20:53:40.073 HYPERVISOR: exec_cmd: vm get_status R6 
+Apr 04 20:54:03.713 HYPERVISOR: exec_cmd: vm set_ghost_status R6 2 
+Apr 04 20:54:03.713 HYPERVISOR: exec_cmd: vm set_ghost_file R6 /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+Apr 04 20:54:03.713 HYPERVISOR: exec_cmd: vm get_status R6 
+Apr 04 20:54:03.714 HYPERVISOR: exec_cmd: vm set_config R6 configs/i6_startup-config.cfg 
+Apr 04 20:54:03.714 HYPERVISOR: exec_cmd: vm start R6 
+Apr 04 20:54:33.925 HYPERVISOR: exec_cmd: vm extract_config R6 
+Apr 04 20:54:33.928 HYPERVISOR: exec_cmd: vm extract_config R6 

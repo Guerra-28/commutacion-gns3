@@ -1,0 +1,31 @@
+Apr 04 20:53:38.468 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 04 20:53:38.468 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 34341.
+Apr 04 20:53:38.475 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 04 20:53:38.475 HYPERVISOR: exec_cmd: hypervisor working_dir /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips 
+Apr 04 20:53:38.475 GENERAL: working_dir=/home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips
+Apr 04 20:53:38.475 HYPERVISOR: exec_cmd: hypervisor working_dir /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/57e16f5b-1a76-4d8b-8657-2cdcf80f175d 
+Apr 04 20:53:38.475 GENERAL: working_dir=/home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/57e16f5b-1a76-4d8b-8657-2cdcf80f175d
+Apr 04 20:53:38.475 HYPERVISOR: exec_cmd: vm create R10 10 c3725 
+Apr 04 20:53:38.475 VM: VM R10 created.
+Apr 04 20:53:38.475 HYPERVISOR: exec_cmd: vm set_con_tcp_port R10 5009 
+Apr 04 20:53:38.476 HYPERVISOR: exec_cmd: c3725 get_mac_addr R10 
+Apr 04 20:53:38.476 HYPERVISOR: exec_cmd: vm set_disk0 R10 0 
+Apr 04 20:53:38.476 HYPERVISOR: exec_cmd: vm get_status R10 
+Apr 04 20:53:38.476 HYPERVISOR: exec_cmd: vm set_idle_pc R10 0x60c09aa0 
+Apr 04 20:53:38.476 HYPERVISOR: exec_cmd: vm set_ios R10 /home/juan/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Apr 04 20:53:38.476 HYPERVISOR: exec_cmd: c3725 set_mac_addr R10 c20a.1762.0000 
+Apr 04 20:53:38.477 HYPERVISOR: exec_cmd: vm set_nvram R10 256 
+Apr 04 20:53:38.477 HYPERVISOR: exec_cmd: vm get_status R10 
+Apr 04 20:53:38.477 HYPERVISOR: exec_cmd: vm slot_add_binding R10 1 0 NM-1FE-TX 
+Apr 04 20:53:38.477 HYPERVISOR: exec_cmd: vm get_status R10 
+Apr 04 20:53:38.477 HYPERVISOR: exec_cmd: vm slot_add_binding R10 2 0 NM-16ESW 
+Apr 04 20:53:41.737 HYPERVISOR: exec_cmd: nio create_udp udp-8d7be5ba-8c7d-4875-ada0-067d3efa48d1 10088 127.0.0.1 10089 
+Apr 04 20:53:41.944 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R10 0 0 udp-8d7be5ba-8c7d-4875-ada0-067d3efa48d1 
+Apr 04 20:53:41.944 HYPERVISOR: exec_cmd: vm get_status R10 
+Apr 04 20:54:04.164 HYPERVISOR: exec_cmd: vm set_ghost_status R10 2 
+Apr 04 20:54:04.164 HYPERVISOR: exec_cmd: vm set_ghost_file R10 /home/juan/GNS3/projects/laboratorio_2_tunels/project-files/dynamips/c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+Apr 04 20:54:04.164 HYPERVISOR: exec_cmd: vm get_status R10 
+Apr 04 20:54:04.168 HYPERVISOR: exec_cmd: vm set_config R10 configs/i10_startup-config.cfg 
+Apr 04 20:54:04.168 HYPERVISOR: exec_cmd: vm start R10 
+Apr 04 20:54:34.379 HYPERVISOR: exec_cmd: vm extract_config R10 
+Apr 04 20:54:34.382 HYPERVISOR: exec_cmd: vm extract_config R10 
